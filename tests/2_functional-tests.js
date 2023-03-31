@@ -50,7 +50,6 @@ suite("Functional Tests", function () {
     // #4
     test('Send {surname: "da Verrazzano"}', function (done) {
       assert.fail();
-
       done();
     });
   });
