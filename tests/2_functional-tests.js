@@ -40,7 +40,7 @@ suite("Functional Tests", function () {
           surname: "Colombo",
         })
         .end(function (err, res) {
-          assert.equal(res.status, "200");
+          assert.equal(res.status, 200);
           assert.equal(res.type, "application/json");
           assert.equal(res.body.name, "Cristoforo");
           assert.equal(res.body.surname, "Colombo");
