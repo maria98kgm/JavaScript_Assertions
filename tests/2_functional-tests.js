@@ -68,8 +68,13 @@ suite("Functional Tests", function () {
 
 const Browser = require("zombie");
 
+Browser.site = "https://js-assertions.onrender.com";
+
 suite("Functional Tests with Zombie.js", function () {
   this.timeout(5000);
+
+  const browser = new Browser();
+  suiteSetup((done) => browser.visit("/", done));
 
   suite("Headless browser", function () {
     test('should have a working "site" property', function () {
